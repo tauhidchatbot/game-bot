@@ -18,6 +18,7 @@ exports.processRequest = function(req, res) {
         TeamInfo.findOne({
             name: teamToSearch
         }, function(err, teamExists) {
+        	console.log(teamExists);
             if (err) {
                 return res.json({
                     speech: 'Something went wrong!',
